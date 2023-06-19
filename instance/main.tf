@@ -6,7 +6,7 @@ provider "aws" {
 
 resource "aws_security_group" "ssh_connection" {
   name = var.sg_name
-  description = "Allow HTTP and SSH inbound traffic"
+  description = "Allow HTTP and SSH inbound traffic for this group"
   dynamic "ingress" {
     for_each = var.ingress_rules
     content {
